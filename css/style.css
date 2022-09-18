@@ -1,22 +1,51 @@
+/*--------------------------------------------*/
+/*-----------------Helps----------------------*/
+/*--------------------------------------------*/
 
+   /* outline: 3px solid red; */
 
 
 
 
 body{
-    background-image:url('../img/astronaut.jpg');
-    background-attachment:fixed;
-  
-    background-size: 100vh
+   background-color: aliceblue;
 }
 
+/*--------------------------------------------*/
+/*-----------------Layout---------------------*/
+/*--------------------------------------------*/
+.full-height {
+    min-height: 100vh;
+}
 
+.astronaut{
+    /*background-image:url('../img/astronaut.jpg');
+    background-attachment:fixed;
+  
+    background-size:auto*/
+    background-color: blue;
+}
 
+.text{
+    background-color: rgb(255, 0, 0);
+}
 
+/*--------------------------------------------*/
+/*-----------------Astronaut------------------*/
+/*--------------------------------------------*/
+.astronaut .heading-box{
+    border: 4px solid black;
+    width: 50%;
+    background-color: rgba 255, 255, 255, 0.7;
+}
 
+.astronaut .heading-box .text {
+    text-align: center;
+}
 
-
-
+.astronaut .heading-box .link {
+    text-align: right;
+}
 
 /*--------------------------------------------*/
 /*-----------------Desktop--------------------*/
