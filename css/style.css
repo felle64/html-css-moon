@@ -26,7 +26,8 @@ body{
 }
 
 .text-page{
-    background-color: rgb(255, 0, 0);
+    background-image:url('../img/space.jpg') ;
+    background-size: cover ;
 }
 
 /*--------------------------------------------*/
