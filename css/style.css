@@ -1,131 +1,390 @@
-/*--------------------------------------------*/
-/*-----------------Helps----------------------*/
-/*--------------------------------------------*/
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
-   /* outline: 3px solid red; */
-
-
-
-
-body{
-   background-color: rgb(220, 104, 16);
+body {
+  background-color: rgb(0, 0, 0);
 }
 
 /*--------------------------------------------*/
 /*-----------------Layout---------------------*/
 /*--------------------------------------------*/
 .full-height {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
-.astronaut{
-    background-image:url('../img/astronaut.jpg');
-    background-size:cover;
-    background-position: 50% 45%;
-    
+.astronaut {
+  display: flex;
+  background-image: url("../img/astronaut.jpg");
+  background-size: cover;
+  background-position: 50% 45%;
 }
 
-.text-page{
-    background-image:url('../img/space.jpg') ;
-    background-size: cover ;
+/*--------------------------------------------*/
+/*---------------Layout Textpage--------------*/
+/*--------------------------------------------*/
+.text-page {
+  background-image: url("../img/space.jpg");
+  background-size: cover;
+  color: white;
+}
+
+.header-space {
+  top: -60px;
+  margin-left: 3rem;
+}
+.header-space h2 {
+  margin: 0;
+  padding: 0;
+}
+.header-space h2 span:first-of-type {
+  z-index: 1;
+  position: relative;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  display: block;
+  font-size: 65px;
+}
+.header-space h2 span:nth-of-type(2) {
+  position: relative;
+  top: -45px;
+  left: 50px;
+  color: gray;
+  font-family: "Times New Roman", Times;
+  font-weight: bold;
+  font-size: 80px;
+}
+
+.header-tom {
+  margin-top: 0;
+  position: relative;
+  margin-left: 3rem;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  white-space: initial;
+}
+
+.main-text-page1-1 {
+  display: block;
+  margin-left: 3rem;
+  margin-right: 20px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem;
+  text-align: left;
+}
+
+.quote-text {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  top: 20px;
+  text-align: left;
+  color: rgb(223, 223, 223);
+}
+
+blockquote {
+  padding: 0;
+  margin: 20px;
+  position: relative;
+}
+
+.quote-text-2 {
+  display: none;
+}
+
+.main-text-page2-1 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  margin-top: 5rem;
+  margin-right: 4rem;
+  margin-left: 2rem;
+  color: white;
+  font-size: 1.25rem;
+}
+.main-text-page2-1 span:first-of-type {
+  position: absolute;
+}
+.main-text-page2-1 span:nth-of-type(2) {
+  position: relative;
+  top: 30px;
+}
+
+.tom {
+  display: none;
+}
+
+.link-text {
+  text-align: left;
+  color: rgb(255, 17, 227);
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  text-decoration: underline;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.cookie-box {
+  display: none;
 }
 
 /*--------------------------------------------*/
 /*-----------------Astronaut------------------*/
 /*--------------------------------------------*/
-.astronaut .heading-box{
-    border: 4px solid black;
-    width: 10rem;
-    background-color: rgba(255, 255, 255, 0.7);
-    position: absolute;
-    top: 80px;
-    left: 50px;
-    padding: 20px;
-    font-family: 'Rubik', sans-serif;
+.astronaut .heading-box {
+  border: 4px solid black;
+  width: 10rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 80px;
+  left: 50px;
+  padding: 20px;
+  font-family: "Rubik", sans-serif;
+  transition: all 0.5s ease-in-out;
 }
 
 .astronaut .heading-box .text {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-weight: 500;
-    margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 30px;
 }
 
-
-
 /*--------------------------------------------*/
-/*-----------------Desktop--------------------*/
+/*-----------------Desktop Astonaut-----------*/
 /*--------------------------------------------*/
 @media screen and (min-width: 800px) {
-    .astronaut .heading-box{
-        width: 15rem;
-    }
-    
-    .astronaut .heading-box .link {
-        text-align: right;
-    }
-    .astronaut .heading-box .link span {
-        position: relative;
-        left: 0;
-        transition: left 0.3s ease-in-out;   
-
-    
-    }
-
-    .astronaut .heading-box .link:hover span {
-        left: 10px;
-
-    }
-
-
-
-}
-/*--------------------------------------------*/
-/*-----------------Button---------------------*/
-/*--------------------------------------------*/
-.button {
-    width: 35px;
-    height: 35px;
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-
-}
-
-.button span {
-    width: 20px;
-    height: 3px;
-    margin-bottom: 4px;
-    border-radius: 3px;
-    display: block;
-    background-color: rgb(0, 0, 0);
+  .astronaut .heading-box {
+    width: 15rem;
+    transition: all 0.5s ease-in-out;
+  }
+  .astronaut .heading-box .link {
+    text-align: right;
+  }
+  .astronaut .heading-box .link span {
     position: relative;
-    right: 0;
     left: 0;
-    transition: all 0.3s ease-in-out;
+    transition: left 0.3s ease-in-out;
+  }
+  .astronaut .heading-box .link:hover span {
+    left: 10px;
+  }
+  /*--------------------------------------------*/
+  /*-----------------Desktop Textpage-----------*/
+  /*--------------------------------------------*/
+  .text-page {
+    display: flex;
+    gap: 100px;
+  }
+  .box-1, .box-2 {
+    width: 50%;
+  }
+  .header-space {
+    /*border: 3px solid navajowhite;*/
+    margin-top: 2rem;
+    margin-left: 3rem;
+  }
+  .header-space h2 span:first-of-type {
+    z-index: 1;
+    position: relative;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    display: block;
+    font-size: 6.25rem;
+  }
+  .header-space h2 span:nth-of-type(2) {
+    position: relative;
+    top: -40px;
+    left: 10px;
+    color: gray;
+    font-family: "Times New Roman", Times;
+    font-weight: bold;
+    font-size: 7.1875rem;
+  }
+  .quote-text {
+    margin-left: 15rem;
+    text-align: left;
+    font-size: 32px;
+  }
+  .quote-text-2 {
+    /*border: 3px solid rgb(29, 145, 129);*/
+    display: flex;
+    background: #fe55ed;
+    background: linear-gradient(to right, #fe55ed 0%, #6B6B6B 50%, #fe55ed 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    text-align: left;
+    margin-right: 22rem;
+    margin-top: 5rem;
+  }
+  .main-text-page2-1 {
+    /*border: 1px solid rgb(0, 26, 255);*/
+    margin-top: 50px;
+    margin-right: 4rem;
+    margin-left: 2rem;
+    color: white;
+    float: left;
+  }
+  .main-text-page2-1 span:first-of-type {
+    position: absolute;
+  }
+  .main-text-page2-1 span:nth-of-type(2) {
+    position: relative;
+    top: 30px;
+  }
+  .tom {
+    height: auto;
+    width: 120px;
+    display: block;
+    float: right;
+    transform: rotate(2deg);
+    margin-right: 100px;
+  }
+  /*--------------------------------------------*/
+  /*-----------------Cookie Box-----------------*/
+  /*--------------------------------------------*/
+  .cookie-box {
+    box-sizing: border-box;
+    z-index: 5;
+    display: block;
+    background-color: rgb(6, 6, 31);
+    color: rgb(225, 0, 100);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 2%;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 5px rgb(225, 0, 100);
+    }
+    to {
+      text-shadow: 0 0 10px rgb(225, 0, 100);
+    }
+  }
+  .cookie-box .cookie-text .cookie-button .button-text {
+    display: block;
+    padding: 0 20px;
+  }
+  .cookie-box .cookie-button {
+    background-color: rgb(8, 17, 96);
+    border: 0;
+    padding: 7px 13px;
+    cursor: pointer;
+    color: white;
+  }
+}
+/*--------------------------------------------*/
+/*-----------------Menu-----------------------*/
+/*--------------------------------------------*/
+.menu-btn {
+  position: absolute;
+  right: 10px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  /*border: 3px solid black;*/
 }
 
-.button:hover span:nth-child(2) {
-   
-    left: 4px;
+.menu-btn-burger {
+  width: 50px;
+  height: 6px;
+  background-color: black;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
 }
 
-.button span:nth-child(1) {
-   
-    left: 4px;
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background-color: black;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
 }
 
-.button span:nth-child(3) {
-   
-    left: 4px;
+.menu-btn-burger::before {
+  transform: translateY(-16px);
+}
+
+.menu-btn-burger::after {
+  transform: translateY(16px);
+}
+
+/*--------------------------------------------*/
+/*---------------Animation Menu---------------*/
+/*--------------------------------------------*/
+.menu-btn.open .menu-btn-burger {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.menu-btn.open .menu-btn-burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn-burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/*--------------------------------------------*/
+/*-----------------Menu nav-------------------*/
+/*--------------------------------------------*/
+.menu-btn + nav {
+  visibility: hidden;
+}
+
+.menu-btn.open + nav {
+  position: absolute;
+  margin-top: 60px;
+  visibility: inherit;
+  width: 100vw;
+  height: 95vh;
+  transition: all 0.3s ease-in-out;
+  font-size: 64px;
+  font-weight: 500;
+  background-color: rgba(237, 241, 242, 0.7);
+  text-transform: uppercase;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
 }
 
 /*--------------------------------------------*/
 /*-----------------Dark Mode------------------*/
 /*--------------------------------------------*/
-@media (prefers-color-scheme:dark) {
-    .astronaut .heading-box .link {
-        color: red;
-    }
-}
+@media (prefers-color-scheme: dark) {
+  .astronaut .heading-box .link {
+    color: black;
+  }
+}/*# sourceMappingURL=style.css.map */
